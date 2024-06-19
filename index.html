@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Management App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-container">
+            <h1>Patient Management App</h1>
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="username" placeholder="Username" class="username-input" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error"></p>
+        </div>
+
+        <div id="register-container" style="display: none;">
+            <h2>Register Patient</h2>
+            <form id="register-form">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="date" id="dob" placeholder="Date of Birth" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="address" placeholder="Address" required></textarea>
+                <button type="submit">Register Patient</button>
+            </form>
+            <p id="response-message"></p>
+            <button id="back-to-modules">Back to Modules</button>
+        </div>
+
+        <div id="modules-container" style="display: none;">
+            <h2>Modules</h2>
+            <button id="outpatient-button">Outpatient</button>
+            <button id="inpatient-button">Inpatient</button>
+            <button id="register-patient-button">Register Patient</button>
+            <button id="logout-button">Logout</button>
+        </div>
+        
+        <div id="outpatient-container" style="display: none;">
+            <h2>Outpatient Module</h2>
+            <input type="text" id="outpatient-search-bar" placeholder="Search by Name, ID, Age, Sex, Unique ID">
+            <button id="outpatient-search-button">Search</button>
+            <table id="outpatient-patient-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy patient list will be populated here -->
+                </tbody>
+            </table>
+            <form id="outpatient-form">
+                <input type="text" id="visitReason" placeholder="Reason for Visit" required>
+                <input type="date" id="visitDate" placeholder="Visit Date" required>
+                <input type="text" id="outpatient-medication" placeholder="Medication Currently On" required>
+                <input type="date" id="outpatient-lastRefill" placeholder="Last Refill" required>
+                <textarea id="outpatient-medicationChange" placeholder="Change of Medication" required></textarea>
+                <textarea id="outpatient-notes" placeholder="Notes"></textarea>
+                <button type="submit">Save Outpatient Details</button>
+            </form>
+            <p id="outpatient-response"></p>
+            <button id="switch-to-inpatient">Switch to Inpatient Module</button>
+            <button id="back-to-modules-from-outpatient">Back to Modules</button>
+        </div>
+        
+        <div id="inpatient-container" style="display: none;">
+            <h2>Inpatient Module</h2>
+            <input type="text" id="inpatient-search-bar" placeholder="Search by Name, ID, Age, Sex, Unique ID">
+            <button id="inpatient-search-button">Search</button>
+            <table id="inpatient-patient-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy patient list will be populated here -->
+                </tbody>
+            </table>
+            <form id="inpatient-form">
+                <input type="text" id="admissionReason" placeholder="Reason for Admission" required>
+                <input type="date" id="admissionDate" placeholder="Admission Date" required>
+                <input type="date" id="dischargeDate" placeholder="Discharge Date">
+                <input type="text" id="inpatient-medication" placeholder="Medication Currently On" required>
+                <input type="date" id="inpatient-lastRefill" placeholder="Last Refill" required>
+                <textarea id="inpatient-medicationChange" placeholder="Change of Medication" required></textarea>
+                <textarea id="inpatient-notes" placeholder="Notes"></textarea>
+                <button type="submit">Save Inpatient Details</button>
+            </form>
+            <p id="inpatient-response"></p>
+            <button id="switch-to-outpatient">Switch to Outpatient Module</button>
+            <button id="back-to-modules-from-inpatient">Back to Modules</button>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

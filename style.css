@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button.primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.primary:hover {
+    background-color: #0056b3;
+}
+
+button.secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button.secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Module Specific Styles */
+
+#register-container {
+    background-color: #ffc107; /* Yellow */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#outpatient-container {
+    background-color: #28a745; /* Green */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#inpatient-container {
+    background-color: #dc3545; /* Red */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#outpatient-search-bar, #inpatient-search-bar {
+    width: calc(100% - 130px);
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+}
+
+#outpatient-search-button, #inpatient-search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#outpatient-search-button:hover, #inpatient-search-button:hover {
+    background-color: #0056b3;
+}
+
+#response-message, #outpatient-response, #inpatient-response {
+    color: #28a745;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#response-message.error, #outpatient-response.error, #inpatient-response.error {
+    color: #dc3545;
+}
